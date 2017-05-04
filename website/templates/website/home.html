@@ -1,0 +1,262 @@
+{%  extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!--Banner-->
+    <div class="banner">
+        <div class="bg-color">
+            <div class="container">
+                <div class="row">
+                    <div class="banner-text text-center">
+                        <div class="text-border">
+                            <h2 class="text-dec">Les elites de demain</h2>
+                        </div>
+                        <div class="intro-para text-center quote">
+                            <p class="big-text">Apprennez Aujourd'hui . . . Diriger Demain.</p>
+                            <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto<br>Laudantium enim repellat sapiente quos architecto</p>
+                        </div>
+                        <a href="#qualification" class="mouse-hover"><div class="mouse"></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Banner-->
+
+    <!-- Qualifications -->
+    <section id ="qualification" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Qualifications</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="feature-info">
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Dernieres technologies</h4>
+                  <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-css3"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Leadership</h4>
+                  <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-drupal"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Management</h4>
+                  <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-trophy"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Qualifications -->
+
+    <!-- formations -->
+    <section id ="formations" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Formations</h2>
+            <p>Voici les formations que nous mettons a votre disposition <br> Choisissez celui qui vous convient</p>
+            <hr class="bottom-line">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course01.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Management</h3>
+                  <p>Dans ce cours vous allez apprendre le management dans toute sa complexite</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course02.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Entrepreneuriat</h3>
+                  <p>Reveillez l'entrepreneur qui dort en vous grace a ce cours</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course03.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Bureatique</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course04.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Finances</h3>
+                  <p>Decouvrez les secrets des chiffres qui fait tourner le monde de la finance</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course05.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Leadership</h3>
+                  <p>Apprenez a etre le leader dont la societe a besoin</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 padleft-right">
+            <figure class="imghvr-fold-up">
+              <img src={% static 'website/img/course06.jpg' %} class="img-responsive">
+              <figcaption>
+                  <h3>Photographie</h3>
+                  <p>Dans ce cour vous allez apprendre l'art de la photographie et celui du
+                  7eme art.</p>
+              </figcaption>
+              <a href="#"></a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Courses-->
+
+    <!-- Equipe -->
+    <section id="equipe" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Notre Equipe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="pm-staff-profile-container" >
+              <div class="pm-staff-profile-image-wrapper text-center">
+                <div class="pm-staff-profile-image">
+                  <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                </div>
+              </div>
+              <div class="pm-staff-profile-details text-center">
+                <p class="pm-staff-profile-name">Jean-Marie Baafo</p>
+                <p class="pm-staff-profile-title">CEO</p>
+
+                <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="pm-staff-profile-container" >
+              <div class="pm-staff-profile-image-wrapper text-center">
+                <div class="pm-staff-profile-image">
+                  <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                </div>
+              </div>
+              <div class="pm-staff-profile-details text-center">
+                <p class="pm-staff-profile-name">Alvin Tshibangu</p>
+                <p class="pm-staff-profile-title">Customer relationship</p>
+
+                <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="pm-staff-profile-container" >
+              <div class="pm-staff-profile-image-wrapper text-center">
+                <div class="pm-staff-profile-image">
+                    <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                </div>
+              </div>
+              <div class="pm-staff-profile-details text-center">
+                <p class="pm-staff-profile-name">Bryan Johnson</p>
+                <p class="pm-staff-profile-title">Lead Software Engineer</p>
+
+                <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Equipe -->
+
+    <!--Contact-->
+    <section id ="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="header-section text-center">
+                    <h2>Contactez nous</h2>
+                    <p>Besoin d'en savoir plus? Envoyez nous un message !</p>
+                    <hr class="bottom-line">
+                </div>
+                <div id="sendmessage">Votre message a ete envoye. Merci !</div>
+                <div id="errormessage"></div>
+                <form action={% url 'get_message' %} method="post" role="form" class="contactForm">
+                    {% csrf_token %}
+                    <div class="col-md-6 col-sm-6 col-xs-12 left">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control form" id="name" placeholder="Votre Nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Object" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 right">
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Ecrivez quelque chose s'il vous plait" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <!-- Button -->
+                        <button type="submit" id="submit" name="submit" class="form contact-form-button light-form-button oswald light">ENVOYER EMAIL</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!--/ Contact-->
+
+
+
+{% endblock %}

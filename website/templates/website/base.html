@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <title>cradd</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link rel="stylesheet" type="text/css" href={% static 'website/css/font-awesome.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'website/css/bootstrap.min.css'%}>
+    <link rel="stylesheet" type="text/css" href={% static 'website/css/imagehover.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'website/css/style.css' %}>
+    <!-- =======================================================
+    Theme Name: Mentor
+    Theme URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+<body>
+    <!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CRADD</a>
+            </div>
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#nous" class="smoothScroll">Qui sommes nous ?</a></li>
+                    <li><a href="#qualification" class="smoothScroll">Qualifications</a></li>
+                    <li><a href="#formations" class="smoothScroll">Formations</a></li>
+                    <li><a href="#equipe" class="smoothScroll">Notre Equipe</a></li>
+                    <li><a href={% url 'post_list' %} class="smoothScroll">Blog</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Navigation bar-->
+
+    <!-- Main Content -->
+    {% block content %}
+
+    {% endblock %}
+    <!-- End main Content -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container text-center">
+
+            <ul class="social-links">
+                <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+                <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+                <li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li>
+                <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+            </ul>
+            ©2016 Rainbow inc.
+            <div class="credits">
+                <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Mentor
+            -->
+            Designed by <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a>
+        </div>
+    </div>
+</footer>
+<!--/ Footer-->
+
+<script src={% static "website/js/jquery.min.js"%}></script>
+<script src={% static "website/js/jquery.easing.min.js"%}></script>
+<script src={% static "website/js/bootstrap.min.js"%}></script>
+<script src={% static "website/js/custom.js"%}></script>
+<script src="contactform/contactform.js"></script>
+</body>
