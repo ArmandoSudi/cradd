@@ -1,0 +1,55 @@
+{%  extends 'website/base.html' %}
+{% load static %}
+
+{%  block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Galerie</h1>
+            </div>
+
+
+            {% for image in images %}
+                <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="{{ image.image.url }}" alt="{{ image.description}}" height="100" width="300">
+                    </a>
+                    <p>{{image.description}}</p>
+                </div>
+            {% endfor %}
+
+            </div>
+
+            {% if images.has_other_pages %}
+                <ul class="pagination">
+                    {% if images.has_previous %}
+                        <li><a href="?page={{ images.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+                    {% for i in images.paginator.page_range %}
+                        {% if articles.number == i %}
+                            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if images.has_next %}
+                        <li><a href="?page={{ images.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+
+
+
+
+
+    </div>
+
+{% endblock %}

@@ -2,20 +2,42 @@
 {% load static %}
 
 {% block content %}
-<div class="container" style="padding-top: 100px;">
-    {% for post in posts %}
-    <div class="row" style="margin:10px;">
-        <div class="col-md-6 col-sm-6">
-            <img src={% static 'website/img/course02.jpg' %} class="img-responsive" alt="about img">
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <h3><a href={% url 'post_detail' post.id%}>{{ post.title }}</a></h3>
-            <p>published: {{ post.published_date }}</p>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
+    <div class="container" style="padding-top: 100px;">
+        {% for article in articles %}
+            <div class="row" style="margin:10px;">
+                <div class="col-md-4 col-sm-6">
+                    <img src={% static 'website/img/course02.jpg' %} class="img-responsive thumbnail" alt="about img" height="230px" width="350px">
+                </div>
+                <div class="col-md-8 col-sm-6">
+                    <h3><a href={% url 'article_detail' article.id %}>{{ article.title }}</a></h3>
+                    <p>published: {{ article.publication_date }}</p>
+                    <p>{{ article.text|linebreaksbr }}</p>
+                </div>
+
+            </div>
+        {% endfor %}
+
+        {% if articles.has_other_pages %}
+            <ul class="pagination">
+                {% if articles.has_previous %}
+                    <li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in articles.paginator.page_range %}
+                    {% if articles.number == i %}
+                        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                    {% else %}
+                        <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                    <li><a href="?page={{ articles.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+            </ul>
+        {% endif %}
 
     </div>
-    {% endfor %}
-
-</div>
 {% endblock %}

@@ -2,13 +2,89 @@
 {% load static %}
 
 {% block content %}
-<div class="container" style="padding-top: 100px;">
-    <div class="row" style="margin:10px;">
-        <div class="col-md-6 col-sm-6">
-            <h1>  {{post.title}} </h1>
+
+<!-- Retriveing the image -->
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Article Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Article post -->
+
+            <!-- Title -->
+            <h1>{{ article.title }}</h1>
+
+            <!-- Author -->
+            <!-- <p class="lead">
+                by <a href="#">{{ article.author }}</a>
+            </p> -->
+
+            <!-- Date/Time -->
+            <p><span class="glyphicon glyphicon-time"></span> Posted on {{ article.publication_date }}</p>
+
+            <!-- Preview Image -->
+            <img class="img-responsive" src="" alt="">
+
+            <hr>
+
+            <!-- Post Content -->
+            <p class="lead">{{ article.introduction }}</p>
+            {% for paragraph in article.paragraph_set.all %}
+                <p>{{ paragraph.text }}</p>
+            {% endfor %}
+            <hr>
+
+
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Blog Search Well -->
+            <div class="well">
+                <h4>Blog Search</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+                <!-- /.input-group -->
+            </div>
+
+            <!-- Blog Categories Well -->
+            <!-- <div class="well">
+                <h4>Blog Categories</h4>
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Category Name</a>
+                            </li>
+                            <li><a href="#">Category Name</a>
+                            </li>
+                            <li><a href="#">Category Name</a>
+                            </li>
+                            <li><a href="#">Category Name</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+
         </div>
 
     </div>
+    <!-- /.row -->
+
+
 </div>
+<!-- /.container -->
 
 {% endblock %}

@@ -5,6 +5,14 @@
     Author URL: https://bootstrapmade.com
 */
 
+/* for the pagination */
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
 body {
 	font-size: 15px;
     line-height: 1.52;
@@ -139,7 +147,7 @@ Banner
 	margin-top: 30px;
 }
 .quote .btn{
-    background-color: 
+    background-color: #fff;
 }
 .modal-dialog {
     width: 600px;
