@@ -3,6 +3,7 @@ from .models import Message
 from .models import Article
 from .models import Image
 from .models import Paragraph
+from .models import Project
 
 class ParagraphInLine(admin.StackedInline):
     model = Paragraph
@@ -21,3 +22,4 @@ class MessageAdmin(admin.ModelAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Image, ImageAdmin)
 admin.site.register(Message, MessageAdmin)
+admin.site.register(Project)

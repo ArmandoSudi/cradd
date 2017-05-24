@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href={% static 'website/css/font-awesome.min.css' %}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/bootstrap.min.css'%}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/imagehover.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'website/css/thumbnail-gallery.css' %}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/style.css' %}>
 </head>
 <body>
@@ -25,6 +26,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href={% url 'index' %}>CRA<span>DD</span></a>
+                <a href={% url 'toggle_language' %}>en/fr</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -35,6 +37,7 @@
                     <li><a href={% url 'gallery' %} class="smoothScroll">Galerie</a></li>
                     <li><a href={% url 'article_list' %} class="smoothScroll">Blog</a></li>
                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    <li><a href={% url 'toggle_language' %} class="smoothScroll">EN/FR</a></li>
                 </ul>
             </div>
         </div>
