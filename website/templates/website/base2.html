@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Developement and training NGO">
-    <meta name="keywords" content="An NGO that train people, NGO for develpment">
-
+    <meta name="description" content="ONG de pour le developpement et la formation des jeunes">
+    <meta name="keywords" content="ONG, Organisation non gouvernementale, fomation, deleoppement, RDC, republique democratique du congo, kinshasa">
     <title>cradd</title>
-
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans"> -->
     <link rel="stylesheet" type="text/css" href={% static 'website/css/font-awesome.min.css' %}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/bootstrap.min.css'%}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/imagehover.min.css' %}>
     <link rel="stylesheet" type="text/css" href={% static 'website/css/style.css' %}>
-
-    <!-- for the galery -->
-    <!-- Custom CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href={% static 'website/css/thumbnail-gallery.css' %} > -->
-    <!-- =======================================================
-    Theme Name: Mentor
-    Theme URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-    ======================================================= -->
 </head>
 <body>
     <!--Navigation bar-->
+    {% block navigation %}
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -35,28 +24,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href={% url 'home' %}>CRADD</a>
+                <a class="navbar-brand" href={% url 'index' %}>CRA<span>DD</span></a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar" >
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href={% url 'home' %} class="smoothScroll">Accueil</a></li>
+                    <li><a href={% url 'index' %} class="smoothScroll">Accueil</a></li>
                     <li><a href="#valeurs" class="smoothScroll">Valeurs</a></li>
                     <li><a href="#objectifs" class="smoothScroll">Objectifs</a></li>
                     <li><a href="#equipe" class="smoothScroll">Notre Equipe</a></li>
                     <li><a href={% url 'gallery' %} class="smoothScroll">Galerie</a></li>
-                    <!-- <li><a href={% url 'article_list' %} class="smoothScroll">Blog</a></li> -->
+                    <li><a href={% url 'article_list' %} class="smoothScroll">Blog</a></li>
                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    {% endblock %}
     <!--/ Navigation bar-->
 
     <!-- Main Content -->
     {% block content %}
 
     {% endblock %}
-    <!-- End main Content -->
+    <!-- End Main Content -->
 
     <!-- Footer -->
     <footer id="footer" class="footer">
@@ -72,13 +62,14 @@
             Tel: +243 82 68 52 656 +243816511694 <br>
 
             ©2016 Rainbow inc.
-    </div>
-</footer>
-<!--/ Footer-->
+        </div>
+    </footer>
 
-<script src={% static "website/js/jquery.min.js"%}></script>
-<script src={% static "website/js/jquery.easing.min.js"%}></script>
-<script src={% static "website/js/bootstrap.min.js"%}></script>
-<script src={% static "website/js/custom.js"%}></script>
-<script src="contactform/contactform.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
 </body>
+</html>

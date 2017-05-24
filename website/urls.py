@@ -5,7 +5,7 @@ from website import views
 
 app_name = 'website'
 urlpatterns = [
-    url(r'^home/', views.home, name='home'),
+    url(r'^$', views.index, name='index'),
     url(r'^contact/', views.contact, name='contact'),
     url(r'^blog/$', views.article_list, name='article_list'),
     url(r'^gallery/$', views.gallery, name='gallery'),

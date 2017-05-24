@@ -1,5 +1,30 @@
-{%  extends 'website/base.html' %}
+{%  extends 'website/base2.html' %}
 {% load static %}
+
+<!--Navigation bar-->
+{% block navigation %}
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href={% url 'index' %}>CRA<span>DD</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href={% url 'index' %} class="smoothScroll">Accueil</a></li>
+                <li><a href={% url 'gallery' %} class="smoothScroll">Galerie</a></li>
+                <li><a href={% url 'article_list' %} class="smoothScroll">Blog</a></li>
+                <li><a href="#contact" class="smoothScroll">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+<!--/ Navigation bar-->
 
 {% block content %}
 
@@ -44,14 +69,12 @@
       <div class="pm-staff-profile-container" >
         <div class="pm-staff-profile-image-wrapper text-center">
           <div class="pm-staff-profile-image">
-              <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+              <img src={% static "website/img/res-programme.jpg" %} alt="" class="img-thumbnail img-circle" />
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
           <p class="pm-staff-profile-name">Ngamoy Batchonane Clarisse</p>
           <p class="pm-staff-profile-title">Responsable de programmes</p>
-
-          <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
     </div>
@@ -63,14 +86,12 @@
         <div class="pm-staff-profile-container" >
           <div class="pm-staff-profile-image-wrapper text-center">
             <div class="pm-staff-profile-image">
-                <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                <img src={% static "website/img/jean-pierre.jpg" %} alt="" class="img-thumbnail img-circle" />
             </div>
           </div>
           <div class="pm-staff-profile-details text-center">
             <p class="pm-staff-profile-name">Ngilima Lomboo Jean Pierre</p>
             <p class="pm-staff-profile-title">Commissaire aux comptes</p>
-
-            <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
@@ -115,14 +136,12 @@
         <div class="pm-staff-profile-container" >
           <div class="pm-staff-profile-image-wrapper text-center">
             <div class="pm-staff-profile-image">
-                <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                <img src={% static "website/img/mul-lukadi.jpg" %} alt="" class="img-thumbnail img-circle" />
             </div>
           </div>
           <div class="pm-staff-profile-details text-center">
-            <p class="pm-staff-profile-name">7.	Mme. Mulamba Lukadi Christine</p>
+            <p class="pm-staff-profile-name">Mulamba Lukadi Christine</p>
             <p class="pm-staff-profile-title">Trésorière Générale</p>
-
-            <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
@@ -131,14 +150,12 @@
         <div class="pm-staff-profile-container" >
           <div class="pm-staff-profile-image-wrapper text-center">
             <div class="pm-staff-profile-image">
-                <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                <img src={% static "website/img/cons-glodie.jpg" %} alt="" class="img-thumbnail img-circle" />
             </div>
           </div>
           <div class="pm-staff-profile-details text-center">
             <p class="pm-staff-profile-name">Baafo Boale Glodie</p>
             <p class="pm-staff-profile-title">Conseillère</p>
-
-            <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
@@ -147,14 +164,12 @@
         <div class="pm-staff-profile-container" >
           <div class="pm-staff-profile-image-wrapper text-center">
             <div class="pm-staff-profile-image">
-                <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+                <img src={% static "website/img/cons-ekila.jpg" %} alt="" class="img-thumbnail img-circle" />
             </div>
           </div>
           <div class="pm-staff-profile-details text-center">
             <p class="pm-staff-profile-name">Ekila Efonge Gisèle</p>
             <p class="pm-staff-profile-title">Conseillère</p>
-
-            <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>
@@ -165,14 +180,12 @@
       <div class="pm-staff-profile-container" >
         <div class="pm-staff-profile-image-wrapper text-center">
           <div class="pm-staff-profile-image">
-              <img src={% static "website/img/mentor.jpg" %} alt="" class="img-thumbnail img-circle" />
+              <img src={% static "website/img/emela-ekila.jpg" %} alt="" class="img-thumbnail img-circle" />
           </div>
         </div>
         <div class="pm-staff-profile-details text-center">
           <p class="pm-staff-profile-name">Imela Ekila David</p>
           <p class="pm-staff-profile-title">Conseiller</p>
-
-          <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
   </div>

@@ -10,7 +10,7 @@ from .forms import ContactForm
 
 # Create your views here.
 
-def home(request):
+def index(request):
     contact_form = ContactForm()
     return render(request, 'website/home.html', {'contact_form': contact_form})
 

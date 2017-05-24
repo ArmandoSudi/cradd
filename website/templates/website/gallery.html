@@ -1,5 +1,31 @@
-{%  extends 'website/base.html' %}
+{%  extends 'website/base2.html' %}
 {% load static %}
+
+<!--Navigation bar-->
+{% block navigation %}
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href={% url 'index' %}>CRA<span>DD</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href={% url 'index' %} class="smoothScroll">Accueil</a></li>
+                <li><a href="#equipe" class="smoothScroll">Notre Equipe</a></li>
+                <li><a href={% url 'gallery' %} class="smoothScroll">Galerie</a></li>
+                <li><a href={% url 'article_list' %} class="smoothScroll">Blog</a></li>
+                <li><a href={% url 'index' %} class="smoothScroll">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+<!--/ Navigation bar-->
 
 {%  block content %}
 
