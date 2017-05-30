@@ -25,7 +25,7 @@ SECRET_KEY = '+#zhpke)v!)j0879yo(=71bgg8_&74kg3hcv=@m7ym6ivhg5j*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','armandosudi.pythonanywhere.com', 'www.cradd.org']
 
 
 # Application definition

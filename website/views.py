@@ -29,7 +29,7 @@ def gallery(request):
     image_list = Image.objects.all()
     page = request.GET.get('page',1)
 
-    paginator = Paginator(image_list,4)
+    paginator = Paginator(image_list,10)
     try:
         images = paginator.page(page)
     except PageNotAnInteger:
@@ -69,7 +69,7 @@ def project_list(request):
     project_list = Project.objects.filter(execution_date__lte=timezone.now()).order_by('execution_date').reverse()
     page = request.GET.get('page',1)
 
-    paginator = Paginator(project_list, 3)
+    paginator = Paginator(project_list, 10)
     try:
         projects = paginator.page(page)
     except PageNotAnInteger:
