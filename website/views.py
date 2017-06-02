@@ -100,6 +100,7 @@ def get_message(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
+
             recipients = ['armando.sudi@gmail.com']
 
             message = Message(name=name, email=email, subject=subject, message=message)
@@ -107,9 +108,11 @@ def get_message(request):
             message.save()
 
             # send_mail(subject, message, email, recipients)
-            return HttpResponseRedirect(reverse('article_list'))
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            return HttpResponseRedirect(reverse('index'))
     else:
-       return HttpResponseRedirect(reverse('article_list'))
+       return HttpResponseRedirect(reverse('index'))
 
 def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
