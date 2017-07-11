@@ -125,3 +125,10 @@ STATIC_URL = '/static/'
 # for uploading files (images, documents, ...)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# The email settings for sendgrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'armandosudi'
+EMAIL_HOST_PASSWORD = 'Kids_969798'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

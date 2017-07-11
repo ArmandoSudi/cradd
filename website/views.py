@@ -55,7 +55,7 @@ def article_list(request):
     article_list = Article.objects.filter(publication_date__lte=timezone.now()).order_by('publication_date').reverse()
     page = request.GET.get('page',1)
 
-    paginator = Paginator(article_list, 3)
+    paginator = Paginator(article_list, 10)
     try:
         articles = paginator.page(page)
     except PageNotAnInteger:
@@ -68,6 +68,7 @@ def article_list(request):
 def project_list(request):
     project_list = Project.objects.filter(execution_date__lte=timezone.now()).order_by('execution_date').reverse()
     page = request.GET.get('page',1)
+    language_preference = request.session.get('language', 'FR')
 
     paginator = Paginator(project_list, 10)
     try:
@@ -77,7 +78,10 @@ def project_list(request):
     except EmptyPage:
         projects = paginator.page(paginator.num_pages)
 
-    return render(request, 'website/project_list.html', { 'projects': projects })
+    if language_preference == 'FR':
+        return render(request, 'website/project_list.html', { 'projects': projects })
+    else :
+        return render(request, 'website/project_list_en.html', { 'projects': projects })
 
 def article_detail(request, article_id):
     article = get_object_or_404(Article, pk=article_id)

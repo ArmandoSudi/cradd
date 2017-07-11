@@ -26,7 +26,7 @@
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{ article.publication_date }}</p>
 
             <!-- Preview Image -->
-            <img class="img-responsive" src="" alt="">
+            <img class="img-responsive" src="{{ article.photo.url }}" alt="">
 
             <hr>
 
@@ -45,7 +45,7 @@
         <div class="col-md-4">
 
             <!-- Blog Search Well -->
-            <div class="well">
+            <!-- <div class="well">
                 <h4>Blog Search</h4>
                 <div class="input-group">
                     <input type="text" class="form-control">
